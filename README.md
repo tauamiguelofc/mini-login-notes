@@ -143,9 +143,3 @@ Desenvolvimento, arquitetura e design minimalista.
 <p align="center">
   <sub>⭐ Dê um star se este projeto te ajudou. Pequenas coisas movem grandes ideias.</sub>
 </p>
-
-
-
-
-Esse `README.md` fica bonito no GitHub (com centralização, emojis e formatação balanceada), tem **zero redundância** e transmite a ideia de “projeto leve e funcional”.
-Serve tanto pra quem vai usar o Codespaces quanto pra quem baixa localmente.
