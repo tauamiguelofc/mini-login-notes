@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Anotações</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="notes">
+    <h2>Suas Anotações</h2>
+    <form id="noteForm" action="/save-note" method="POST">
+      <input type="hidden" name="user" id="user">
+      <textarea name="content" rows="3" placeholder="Digite sua anotação..." required></textarea>
+      <button type="submit">Salvar</button>
+    </form>
+    <div id="list"></div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const user = params.get("user");
+    document.getElementById("user").value = user;
+
+    async function loadNotes() {
+      const res = await fetch(`/api/notes?user=${encodeURIComponent(user)}`);
+      const data = await res.json();
+      const list = document.getElementById("list");
+      list.innerHTML = data.map(n => `<div class='note'>${n.content}</div>`).join("");
+    }
+    loadNotes();
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+:root {
+  --bg: #0d0d0d;
+  --panel: #1b1b1b;
+  --text: #e4e4e4;
+  --accent: #0ff;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+form, .notes {
+  background: var(--panel);
+  padding: 24px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 380px;
+  box-shadow: 0 0 12px #000;
+}
+
+input, textarea, button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #121212;
+  color: var(--text);
+}
+
+button {
+  background: var(--accent);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.note {
+  background: #121212;
+  padding: 8px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
